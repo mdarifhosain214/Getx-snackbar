@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:getx_snackbar/alert_dialog.dart';
-import 'package:getx_snackbar/home_screen.dart';
 import 'package:get/get.dart';
+import 'bottom_sheet.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -13,13 +12,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-
+appBarTheme: AppBarTheme(
+  centerTitle: true
+),
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const AlertDialogClass(),
+      home: const BottomSheetClass(),
     );
   }
 }
